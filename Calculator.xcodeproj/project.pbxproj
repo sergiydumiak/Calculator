@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		B11EEA5F26D4F3130080AB62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA5E26D4F3130080AB62 /* AppDelegate.swift */; };
-		B11EEA6126D4F3130080AB62 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA6026D4F3130080AB62 /* SceneDelegate.swift */; };
-		B11EEA6326D4F3130080AB62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA6226D4F3130080AB62 /* ViewController.swift */; };
+		B11EEA6326D4F3130080AB62 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA6226D4F3130080AB62 /* CalculatorViewController.swift */; };
 		B11EEA6626D4F3130080AB62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B11EEA6426D4F3130080AB62 /* Main.storyboard */; };
 		B11EEA6826D4F3140080AB62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B11EEA6726D4F3140080AB62 /* Assets.xcassets */; };
 		B11EEA6B26D4F3140080AB62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B11EEA6926D4F3140080AB62 /* LaunchScreen.storyboard */; };
+		B11EEA7626D4F3EE0080AB62 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA7526D4F3EE0080AB62 /* InfoViewController.swift */; };
+		B11EEA7826D4F8A40080AB62 /* OperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA7726D4F8A40080AB62 /* OperationProtocol.swift */; };
+		B11EEA7A26D4F94E0080AB62 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA7926D4F94E0080AB62 /* Operations.swift */; };
+		B11EEA7C26D4FA480080AB62 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B11EEA7B26D4FA480080AB62 /* Common.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B11EEA5B26D4F3130080AB62 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B11EEA5E26D4F3130080AB62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B11EEA6026D4F3130080AB62 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B11EEA6226D4F3130080AB62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B11EEA6226D4F3130080AB62 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		B11EEA6526D4F3130080AB62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B11EEA6726D4F3140080AB62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B11EEA6A26D4F3140080AB62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B11EEA6C26D4F3140080AB62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B11EEA7526D4F3EE0080AB62 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		B11EEA7726D4F8A40080AB62 /* OperationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationProtocol.swift; sourceTree = "<group>"; };
+		B11EEA7926D4F94E0080AB62 /* Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		B11EEA7B26D4FA480080AB62 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +63,41 @@
 			isa = PBXGroup;
 			children = (
 				B11EEA5E26D4F3130080AB62 /* AppDelegate.swift */,
-				B11EEA6026D4F3130080AB62 /* SceneDelegate.swift */,
-				B11EEA6226D4F3130080AB62 /* ViewController.swift */,
-				B11EEA6426D4F3130080AB62 /* Main.storyboard */,
+				B11EEA7326D4F3700080AB62 /* Helpers */,
+				B11EEA7426D4F37B0080AB62 /* Common */,
+				B11EEA7226D4F3660080AB62 /* UserFlows */,
 				B11EEA6726D4F3140080AB62 /* Assets.xcassets */,
 				B11EEA6926D4F3140080AB62 /* LaunchScreen.storyboard */,
 				B11EEA6C26D4F3140080AB62 /* Info.plist */,
 			);
 			path = Calculator;
+			sourceTree = "<group>";
+		};
+		B11EEA7226D4F3660080AB62 /* UserFlows */ = {
+			isa = PBXGroup;
+			children = (
+				B11EEA7526D4F3EE0080AB62 /* InfoViewController.swift */,
+				B11EEA6226D4F3130080AB62 /* CalculatorViewController.swift */,
+				B11EEA6426D4F3130080AB62 /* Main.storyboard */,
+			);
+			path = UserFlows;
+			sourceTree = "<group>";
+		};
+		B11EEA7326D4F3700080AB62 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B11EEA7726D4F8A40080AB62 /* OperationProtocol.swift */,
+				B11EEA7926D4F94E0080AB62 /* Operations.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B11EEA7426D4F37B0080AB62 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B11EEA7B26D4FA480080AB62 /* Common.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +170,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B11EEA6326D4F3130080AB62 /* ViewController.swift in Sources */,
+				B11EEA6326D4F3130080AB62 /* CalculatorViewController.swift in Sources */,
+				B11EEA7826D4F8A40080AB62 /* OperationProtocol.swift in Sources */,
+				B11EEA7626D4F3EE0080AB62 /* InfoViewController.swift in Sources */,
 				B11EEA5F26D4F3130080AB62 /* AppDelegate.swift in Sources */,
-				B11EEA6126D4F3130080AB62 /* SceneDelegate.swift in Sources */,
+				B11EEA7C26D4FA480080AB62 /* Common.swift in Sources */,
+				B11EEA7A26D4F94E0080AB62 /* Operations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

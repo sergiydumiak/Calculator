@@ -1,24 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bEv-YZ-e3B">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Fcn-FF-M88">
+            <objects>
+                <navigationController id="bEv-YZ-e3B" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aK9-kc-vKT">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="PCu-uj-ifA" kind="relationship" relationship="rootViewController" id="fDX-rc-XPz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUv-Dr-eXs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2325" y="-52"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="pMp-04-psE">
+            <objects>
+                <viewController id="PCu-uj-ifA" customClass="InfoViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wjs-2T-dg1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here should be description of your calculator, add some images or additional control elements e.t.c." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQJ-ce-JJo">
+                                <rect key="frame" x="5.5" y="399.5" width="403.5" height="97"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKh-5y-xhV">
+                                <rect key="frame" x="132" y="512.5" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="C2K-tA-Qdi"/>
+                                    <constraint firstAttribute="height" constant="40" id="c3s-Ao-0XO"/>
+                                </constraints>
+                                <state key="normal" title="Start Calculation"/>
+                                <connections>
+                                    <action selector="openCalculatorViewController:" destination="PCu-uj-ifA" eventType="touchUpInside" id="FBK-8l-4wE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="14o-pp-sdf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kQJ-ce-JJo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="14o-pp-sdf" secondAttribute="leading" id="0ix-CT-w5f"/>
+                            <constraint firstItem="kQJ-ce-JJo" firstAttribute="centerX" secondItem="wjs-2T-dg1" secondAttribute="centerX" id="Uzh-IM-nQ2"/>
+                            <constraint firstItem="14o-pp-sdf" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kQJ-ce-JJo" secondAttribute="trailing" id="Vhn-HZ-nYT"/>
+                            <constraint firstItem="fKh-5y-xhV" firstAttribute="centerX" secondItem="wjs-2T-dg1" secondAttribute="centerX" id="VpT-gc-UGB"/>
+                            <constraint firstItem="fKh-5y-xhV" firstAttribute="top" secondItem="kQJ-ce-JJo" secondAttribute="bottom" constant="16" id="gPv-hz-cji"/>
+                            <constraint firstItem="kQJ-ce-JJo" firstAttribute="centerY" secondItem="wjs-2T-dg1" secondAttribute="centerY" id="zUP-T2-ZMk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nZR-gz-5qD"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="kQJ-ce-JJo" id="cPb-rV-9EA"/>
+                        <outlet property="startButton" destination="fKh-5y-xhV" id="vps-vQ-xnv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxL-da-IdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1539" y="-60"/>
+        </scene>
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CalculatorViewController" id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="10" y="-7"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
